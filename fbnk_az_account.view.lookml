@@ -50,6 +50,7 @@
   - measure: principal_sum
     type: sum
     sql: ${TABLE}.principal
+    drill_fields: [id, principal]
     
   - measure: principal_average
     type: average
