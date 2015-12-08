@@ -17,6 +17,10 @@
 
   - dimension: co_code
     sql: ${TABLE}.CO_CODE
+    html: |
+      {{ linked_value }}
+      <a href="https://mcap.mlogica.com:9999/dashboards/4?Branch={{value}}" target="_new"> 
+      <img src="/images/qr-graph-line@2x.png" height=20 width=20></a>
 
   - dimension: create
     type: time
@@ -35,8 +39,19 @@
     type: number
     sql: ${TABLE}.PRINCIPAL
     
+  - dimension: principal_tier
+    type: tier
+    tiers: [0,1000,5000,10000,50000,100000,500000,1000000]
+    style: integer
+    sql: ${TABLE}.PRINCIPAL
+    value_format: '$#,##0'
+    
   - dimension: region
     sql: ${TABLE}.region
+    html: |
+      {{ linked_value }}
+      <a href="https://mcap.mlogica.com:9999/dashboards/3?Region={{value}}" target="_new"> 
+      <img src="/images/qr-graph-line@2x.png" height=20 width=20></a>
 
   - dimension: value
     type: time
