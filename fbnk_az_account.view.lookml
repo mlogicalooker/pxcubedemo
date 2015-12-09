@@ -60,7 +60,7 @@
 
   - measure: count
     type: count
-    drill_fields: [id]
+    drill_fields: [account_number, account_type, principal]
     
   - measure: principal_sum
     type: sum
