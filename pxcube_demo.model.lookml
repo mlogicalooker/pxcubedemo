@@ -6,6 +6,10 @@
 - explore: f_company
 
 - explore: fbnk_az_account
+  joins:
+  
+    - join: fbnk_az_account_m1
+      foreign_key: fbnk_az_account.co_code
 
 - explore: fbnk_az_account_m1
 
